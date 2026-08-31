@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frontpage on Blowfish</title>
-    <link>http://localhost:57387/</link>
-    <description>Recent content in Frontpage on Blowfish</description>
+    <title>Frontpage on Home</title>
+    <link>http://localhost:61846/</link>
+    <description>Recent content in Frontpage on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2026 </copyright>
-    <atom:link href="http://localhost:57387/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
+    <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
+    <copyright>© 2026 Nicoline Visby</copyright>
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:61846/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>3rd Semester Project Week 1 - What am I making?</title>
+      <link>http://localhost:61846/posts/drinksapplication/week-1-project-idea/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:61846/posts/drinksapplication/week-1-project-idea/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:61846/posts/drinksapplication/week-2-domain-model-system-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:61846/posts/drinksapplication/week-2-domain-model-system-structure/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:61846/posts/drinksapplication/week-2-jpa-dao-interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:61846/posts/drinksapplication/week-2-jpa-dao-interfaces/</guid>
+      <description></description>
+      
+    </item>
     
   </channel>
 </rss>
