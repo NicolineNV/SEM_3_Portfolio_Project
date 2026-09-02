@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Home</title>
-    <link>http://localhost:61846/posts/</link>
+    <link>http://localhost:61397/posts/</link>
     <description>Recent content in Posts on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
     <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
     <copyright>© 2026 Nicoline Visby</copyright>
-    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:61846/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:61397/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Visualize the goal - User stories</title>
+      <link>http://localhost:61397/posts/drinksapplication/week-2-user-stories-goal/</link>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:61397/posts/drinksapplication/week-2-user-stories-goal/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>3rd Semester Project Week 1 - What am I making?</title>
-      <link>http://localhost:61846/posts/drinksapplication/week-1-project-idea/</link>
+      <link>http://localhost:61397/posts/drinksapplication/week-1-project-idea/</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:61846/posts/drinksapplication/week-1-project-idea/</guid>
+      <guid>http://localhost:61397/posts/drinksapplication/week-1-project-idea/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:61846/posts/drinksapplication/week-2-domain-model-system-structure/</link>
+      <link>http://localhost:61397/posts/drinksapplication/week-2-jpa-dao-interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:61846/posts/drinksapplication/week-2-domain-model-system-structure/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:61846/posts/drinksapplication/week-2-jpa-dao-interfaces/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:61846/posts/drinksapplication/week-2-jpa-dao-interfaces/</guid>
+      <guid>http://localhost:61397/posts/drinksapplication/week-2-jpa-dao-interfaces/</guid>
       <description></description>
       
     </item>

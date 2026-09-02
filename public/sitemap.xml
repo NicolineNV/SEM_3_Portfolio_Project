@@ -3,30 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:61846/posts/drinksapplication/week-1-project-idea/</loc>
+    <loc>http://localhost:52030/</loc>
+    <lastmod>2026-09-01T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:52030/posts/</loc>
+    <lastmod>2026-09-01T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:52030/posts/drinksapplication/week-2-user-stories-goal/</loc>
+    <lastmod>2026-09-01T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:52030/posts/drinksapplication/week-1-project-idea/</loc>
     <lastmod>2026-08-30T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:61846/</loc>
-    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:61846/posts/</loc>
-    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:61846/posts/drinksapplication/week-2-domain-model-system-structure/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:61846/posts/drinksapplication/week-2-jpa-dao-interfaces/</loc>
+    <loc>http://localhost:52030/posts/drinksapplication/week-2-jpa-dao-interfaces/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
