@@ -1,5 +1,5 @@
 ---
-title: Coding structure
+title: Entry 3 - Coding structure
 date: 2026-09-02
 showAuthor: true
 ---
@@ -12,4 +12,4 @@ Today I am creating the repository, the README file and setting up the rough str
 [![Repo](https://github-readme-stats.vercel.app/api/pin/?username=NicolineNV&repo=SEM_3_Drinks_Application_Portfolio_Project)](https://github.com/NicolineNV/SEM_3_Drinks_Application_Portfolio_Project.git)
 
 
- 
+

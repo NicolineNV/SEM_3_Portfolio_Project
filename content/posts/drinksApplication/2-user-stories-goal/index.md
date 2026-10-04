@@ -1,5 +1,5 @@
 ---
-title: Visualize the goal - User stories
+title: Entry 2 - Visualize the goal - User stories
 date: 2026-09-01
 showAuthor: true
 ---
@@ -33,7 +33,7 @@ When I was writing my user stories, I asked myself a question: "Would it not mak
     - _Criteria: different categories, also known as "drink families," each with their own criteria._
 
 5. **As a User**, I want to describe the taste of the drink I want, so that the recipe I get matches my preferred taste.
-    - _Criteria: taste compass to pinpoint preferred taste profile._
+    - _Criteria: 5 ajustable scales from 1-5, to pinpoint preferred taste profile (Sweet, Sour, Bitter, Salt, Spicy)._
 
 6. **As a User**, I want to choose what kind of spirit goes into my drink, so that the app can find the kind of drink I want.
     - _Criteria: able to filter through types of spirits to narrow down recipes._

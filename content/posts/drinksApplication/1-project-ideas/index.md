@@ -1,5 +1,5 @@
 ---
-title: 3rd Semester Project Week 1 - What am I making?
+title: Entry 1 - 3rd Semester Project Week 1 - What am I making?
 date: 2026-08-30
 showAuthor: true;
 ---

@@ -260,7 +260,7 @@
     
     
     "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/week-2-jpa-dao-interfaces/",
-    "wordCount":  71 
+    "wordCount":  234 
   }]
   </script>
 
@@ -608,7 +608,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-09-02T00:00:00&#43;00:00">2 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>71 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2026-09-02T00:00:00&#43;00:00">2 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>234 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -772,6 +772,21 @@ Today I am creating the repository, the README file and setting up the rough str
     src="https://github-readme-stats.vercel.app/api/pin/?username=NicolineNV&amp;repo=SEM_3_Drinks_Application_Portfolio_Project"
     ></figure>
 </a></p>
+
+<h2 class="relative group">Database structure and table relations
+    <div id="database-structure-and-table-relations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#database-structure-and-table-relations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I min udarbejdelse af min database og dens tabeller, stilte jeg mig selv et vigtigt spørgsmål: Hvad kræver en cocktail for at være en cocktail?
+Dette var et vigtigt spørgsmål at få svar på, da den tabel som holder cocktail opskrifterne, skal vide hvilke af de andre tabeller (Spirit, Liqueur, Mixer, Syrup, Garnish) den skal have fremmed nøgler fra, og hvilke som er &ldquo;valgfrie&rdquo;.
+Som udgangspunkt tænkte jeg det kun var Garnish som var valgfri, men så gik det op for mig, at oprskirfter som f.eks. Old Fashioned jo ikke har hverken Mixer eller Liqueur i. Hvilket betød at den eneste tabel som var krævet en fremmed nøgle fra, var Spirit - da en cocktail altid vil have en form for base spiritus.
+Eller ville den? For det er jo også muligt at lave non-alcoholic cocktails, hvilket jo betyder at Spirit hellere ikke kan være påkrævet</p>
+<p>Pga. dette endte mit ERD diagram med at se således ud:</p>
 
           
           

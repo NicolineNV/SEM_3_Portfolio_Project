@@ -9,34 +9,44 @@
     <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
     <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
     <copyright>© 2026 Nicoline Visby</copyright>
-    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Coding structure</title>
-      <link>http://localhost:1313/posts/drinksapplication/week-2-jpa-dao-interfaces/</link>
+      <title>Entry 4 - Database and schema - important decisions</title>
+      <link>http://localhost:1313/posts/drinksapplication/4-database/</link>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/4-database/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 3 - Coding structure</title>
+      <link>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</link>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/week-2-jpa-dao-interfaces/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Visualize the goal - User stories</title>
-      <link>http://localhost:1313/posts/drinksapplication/week-2-user-stories-goal/</link>
+      <title>Entry 2 - Visualize the goal - User stories</title>
+      <link>http://localhost:1313/posts/drinksapplication/2-user-stories-goal/</link>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/week-2-user-stories-goal/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/2-user-stories-goal/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>3rd Semester Project Week 1 - What am I making?</title>
-      <link>http://localhost:1313/posts/drinksapplication/week-1-project-idea/</link>
+      <title>Entry 1 - 3rd Semester Project Week 1 - What am I making?</title>
+      <link>http://localhost:1313/posts/drinksapplication/1-project-ideas/</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/week-1-project-idea/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/1-project-ideas/</guid>
       <description></description>
       
     </item>
