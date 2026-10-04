@@ -15,8 +15,8 @@
 
   
   
-    <title>Entry 3 - Coding structure &middot; Home</title>
-    <meta name="title" content="Entry 3 - Coding structure &middot; Home">
+    <title>Entry 3 - The Project and the Overall Architecture &middot; Home</title>
+    <meta name="title" content="Entry 3 - The Project and the Overall Architecture &middot; Home">
   
 
   
@@ -67,7 +67,7 @@
   
   <meta property="og:url" content="http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/">
 	<meta property="og:site_name" content="Home">
-	<meta property="og:title" content="Entry 3 - Coding structure">
+	<meta property="og:title" content="Entry 3 - The Project and the Overall Architecture">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
@@ -76,7 +76,7 @@
 
   
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Entry 3 - Coding structure">
+	<meta name="twitter:title" content="Entry 3 - The Project and the Overall Architecture">
 
   
   
@@ -240,8 +240,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Entry 3 - Coding structure",
-    "headline": "Entry 3 - Coding structure",
+    "name": "Entry 3 - The Project and the Overall Architecture",
+    "headline": "Entry 3 - The Project and the Overall Architecture",
     
     "inLanguage": "en",
     "url" : "http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/",
@@ -260,7 +260,7 @@
     
     
     "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/",
-    "wordCount":  71 
+    "wordCount":  464 
   }]
   </script>
 
@@ -556,7 +556,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Entry 3 - Coding structure
+        Entry 3 - The Project and the Overall Architecture
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -608,7 +608,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-09-02T00:00:00&#43;00:00">2 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>71 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2026-09-02T00:00:00&#43;00:00">2 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>464 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
     
 
     
@@ -751,8 +751,8 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>So after a lot of idea planning and visualizing the final product, today is finally time to start coding - or rather set up the structure.
-Today I am creating the repository, the README file and setting up the rough structure, afterall the class diagram has not been made yet, and I will definetly need that to know excatly how the different parts of the code will work together.</p>
+          <p>So, after a lot of planning and visualizing the final product, it was finally time to start coding - or rather, to set up the structure.
+The first step was to create the repository and the README file, choose the expected technologies and set up the overall architectural structure.</p>
 
 <h2 class="relative group">Repository
     <div id="repository" class="anchor"></div>
@@ -772,6 +772,82 @@ Today I am creating the repository, the README file and setting up the rough str
     src="https://github-readme-stats.vercel.app/api/pin/?username=NicolineNV&amp;repo=SEM_3_Drinks_Application_Portfolio_Project"
     ></figure>
 </a></p>
+<p>The project is a cocktail application where the user goes through a quiz and is matched with a recipe that fits their mood and taste. The goal is for it to end up as a standalone REST API built with Javalin. The foundation is a Java application using Hibernate/JPA against PostgreSQL, built with Maven.</p>
+
+<h2 class="relative group">Technology choices
+    <div id="technology-choices" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#technology-choices" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>At this point, I can&rsquo;t be 100% sure which technologies I am going to end up using, so this list might change during the build process. For now, though, I am at least sure I will be using these:</p>
+<ul>
+<li><strong>Java</strong>, with <strong>Maven</strong> as the build tool</li>
+<li><strong>Hibernate (JPA)</strong> for object-relational mapping</li>
+<li><strong>PostgreSQL</strong> as the database</li>
+<li><strong>Lombok</strong> to remove boilerplate in DTOs</li>
+<li><strong>BCrypt</strong> (jBCrypt) for password hashing</li>
+<li><strong>Javalin</strong> as the final REST framework</li>
+<li><strong>JUnit 5 and Testcontainers</strong> for tests</li>
+</ul>
+
+<h2 class="relative group">Layering
+    <div id="layering" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#layering" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The application is split into layers with a strict separation of responsibilities:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">app
+</span></span><span class="line"><span class="cl">├── config        Hibernate setup and entity registration
+</span></span><span class="line"><span class="cl">├── entities      JPA entities (the data model)
+</span></span><span class="line"><span class="cl">├── dao           Data access (CRUD and queries)
+</span></span><span class="line"><span class="cl">├── dto           Data transfer objects in and out of the service layer
+</span></span><span class="line"><span class="cl">├── services      Business logic
+</span></span><span class="line"><span class="cl">├── strategies    Scoring algorithms (Strategy pattern)
+</span></span><span class="line"><span class="cl">├── exceptions    Error handling
+</span></span><span class="line"><span class="cl">└── utils         Helper functions</span></span></code></pre></div></div>
+<p>The principle is that each layer only knows about the layer below it. <code>services</code> knows nothing about SQL, <code>dao</code> knows nothing about business rules, and <code>entities</code> knows nothing about HTTP. This gives three concrete benefits: each layer can be tested in isolation, parts can be replaced without touching the rest (for example, the Javalin layer can be added later without changing the services), and responsibility is easy to place when new functionality is added.</p>
+
+<h2 class="relative group">Folder structure
+    <div id="folder-structure" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#folder-structure" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A very important part of a good project structure is a good folder structure. This keeps the whole project neat and, most importantly, makes sure that the separation of responsibilities between the layers is not compromised.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Folder Structure"
+    width="718"
+    height="1130"
+    src="/posts/drinksapplication/3-coding-structure-architecture/folder-structure.png"
+    srcset="/posts/drinksapplication/3-coding-structure-architecture/folder-structure.png 800w, /posts/drinksapplication/3-coding-structure-architecture/folder-structure.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/drinksapplication/3-coding-structure-architecture/folder-structure.png"></figure>
+
+<h2 class="relative group">User stories
+    <div id="user-stories" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#user-stories" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As mentioned in the last entry, this project is driven by nine core user stories (account creation and login, saving favorites, the quiz covering drink family, taste and spirit, displaying the recommended recipe, and admin login and recipe creation). On top of that, there are nine &ldquo;nice-to-have&rdquo; stories (recommendations, sharing, drink strength, ratings, and so on) that will only be taken on if time allows. This keeps the scope under control. After all, the last thing I want is scope creep and a half-finished product because the scope was too big, with too many unnecessary features.</p>
 
           
           
@@ -817,9 +893,9 @@ Today I am creating the repository, the README file and setting up the rough str
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/drinksapplication/4-database/">
+              href="/posts/drinksapplication/5-entities-jpa-mapping/">
               <span class="leading-6">
-                Entry 4 - Database and schema - important decisions&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Entry 5 - Entities and JPA Mapping&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             

@@ -260,7 +260,7 @@
     
     
     "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/4-database/",
-    "wordCount":  800 
+    "wordCount":  1006 
   }]
   </script>
 
@@ -608,7 +608,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-04T00:00:00&#43;00:00">4 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>800 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2026-10-04T00:00:00&#43;00:00">4 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1006 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -795,26 +795,32 @@
     </span>
     
 </h3>
-<p>I decided to build my <code>schema.sql</code> and database first before my Java entities. This means that the entities mirror the tables, and not the other way around. <code>schema.sql</code> is therefore &ldquo;the truth&rdquo;, not Hibernate&rsquo;s auto-generated guesses.</p>
-<p>To make sure it stays that way and that Hibernate does not override my SQL file, <code>schema.sql</code> lives in a directory called <code>database/</code> in the project root - not in <code>src/main/resources</code>. The SQL script is run manually, directly in PostgreSQL, when the database is set up, and therefore does not need to be packaged into the JAR file.</p>
+<p>I decided to build my <code>schema.sql</code> and database first before my Java entities. This means that the entities mirror the tables, and not the other way around. <code>schema.sql</code> is therefore &ldquo;the truth&rdquo;, not Hibernate&rsquo;s auto-generated guesses. All though it can come in handy somethimes that Hibernate can generate tables automatically (<code>hbm2ddl.auto=create</code>) - it can also has its down sides like how its guesses about column types and constraints are imprecise. With a hand-written schema I control data types, <code>CHECK</code> constraints and foreign keys myself, and I can prove that the entities and the schema agree</p>
+<p>The script lives in <code>database/</code> in the project root and not in <code>src/main/resources</code>. It is run manually against PostgreSQL and is not part of the application&rsquo;s runtime, so it should not be packaged into the JAR.</p>
 
-<h3 class="relative group">FlavorTag
-    <div id="flavortag" class="anchor"></div>
+<h3 class="relative group">Flavor profiles: join tables with intensity
+    <div id="flavor-profiles-join-tables-with-intensity" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#flavortag" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#flavor-profiles-join-tables-with-intensity" aria-label="Anchor">#</a>
     </span>
     
 </h3>
 <p>As I mentioned in the post about my idea, the user should be able to choose a cocktail based on a flavor preference. This is the most important aspect of my API - you could even go as far as to say it is part of the main purpose.</p>
-<p>These flavor profiles are modeled as <code>FlavorTag</code> + <strong>join tables</strong> holding an <code>intensity</code> value <strong>(1-5)</strong> for each ingredient type, such as <code>spirit_flavor_tag</code>. Since an ordinary <code>@ManyToMany</code> relationship cannot hold extra columns, the join tables have to be entities of their own with composite keys.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">spirit_flavor_tag</span><span class="w"> </span><span class="p">(</span><span class="w">
+<p>Every ingredient (Spirit, Liqueur, Mixer, Syrup) has an intensity from 1 to 5 for each flavor dimension (sweet, sour, bitter, salty, spicy). These flavor profiles are modeled as <code>FlavorTag</code> + <strong>join tables</strong> holding an <code>intensity</code> value for each ingredient type, such as <code>spirit_flavor_tag</code>. Since an ordinary <code>@ManyToMany</code> relationship cannot hold extra columns, the join tables have to be entities of their own with composite keys.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">flavor_tag</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">id</span><span class="w">   </span><span class="n">BIGSERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">spirit_flavor_tag</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">spirit_id</span><span class="w">     </span><span class="nb">BIGINT</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">spirit</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">     </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">flavor_tag_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">flavor_tag</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">intensity</span><span class="w">     </span><span class="nb">SMALLINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">intensity</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">spirit_id</span><span class="p">,</span><span class="w"> </span><span class="n">flavor_tag_id</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div>
+<p>The primary key is composed of the two foreign keys, so an ingredient can only have one intensity per flavor dimension. The <code>CHECK</code> constraint guarantees at the database level that the intensity is between 1 and 5, so invalid data can never get in, regardless of which code writes to the table.</p>
 
 <h3 class="relative group"><code>CocktailMenu</code> join table
     <div id="cocktailmenu-join-table" class="anchor"></div>
@@ -825,7 +831,7 @@
     </span>
     
 </h3>
-<p><code>CocktailMenu</code> was chosen to be a join table between <code>User</code> and <code>Cocktail</code>. Its main purpose is to hold the users&rsquo; saved favorites, and also has an extra column, <code>saved_at</code>. This table covers a big part of user story 2.</p>
+<p><code>CocktailMenu</code> was chosen to be a join table between <code>User</code> and <code>Cocktail</code> called <code>user_favorite_cocktail</code>. Its main purpose is to hold the users&rsquo; saved favorites, and also has an extra column, <code>saved_at</code>. This table covers a big part of user story 2.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">user_favorite_cocktail</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">user_id</span><span class="w">     </span><span class="nb">BIGINT</span><span class="w">    </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">cocktail_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w">    </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cocktail</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
@@ -843,11 +849,8 @@
     
 </h3>
 <p>When I was building the tables and their relationships to each other, I asked myself an important question: <strong>&ldquo;What does a cocktail actually contain in my system?&rdquo;</strong></p>
-<p>This was an important question because I have chosen to split the ingredients into categories <strong>Spirit</strong>, <strong>Liqueur</strong>, <strong>Mixer</strong>, <strong>Syrup</strong> and <strong>Garnish</strong> - and therefore have these categories as columns in my <code>cocktail</code> table.</p>
-<p>Cocktails such as the <strong>Old Fashioned</strong> only have a base alcohol <strong>(Spirit)</strong> and ice, so all the other category columns would end up being <code>NULL</code>. My thought was then to make <strong>Liqueur</strong>, <strong>Mixer</strong>, <strong>Syrup</strong> and <strong>Garnish</strong> nullable and keep only <strong>Spirit</strong> as <code>NOT NULL</code>, but that was not possible either, since some recipes are alcohol-free.</p>
-<p>So in the end, only <code>cocktail_family_id</code> is <code>NOT NULL</code> among the relationships, and all the others are nullable.</p>
-<p>This means that a <strong>Cocktail</strong> will always have a <em><strong>&ldquo;family&rdquo;</strong></em> (recipe group), and that the business rule that it contains <em><strong>&ldquo;at least one ingredient&rdquo;</strong></em> was moved to the service layer instead of being enforced as a DB constraint.</p>
-<p>On top of that, <strong>Non-alcoholic</strong> is handled as a <code>CocktailFamily</code> <strong>(&ldquo;Mocktails&rdquo;)</strong>, not as a separate flag. That is simpler and fits the family filter in the quiz.</p>
+<p>My first draft made Spirit, Liqueur, Mixer and Syrup required on a cocktail. That did not hold up in reality: Cocktails such as the <strong>Old Fashioned</strong> only have a base alcohol <strong>(Spirit)</strong> and ice, so all the other category columns would end up being <code>NULL</code>. My thought was then to make <strong>Liqueur</strong>, <strong>Mixer</strong>, <strong>Syrup</strong> and <strong>Garnish</strong> nullable and keep only <strong>Spirit</strong> as <code>NOT NULL</code>, but that was not possible either, since some recipes are non-alcoholic.</p>
+<p>So in the end, only <code>cocktail_family_id</code> is <code>NOT NULL</code> among the relationships, and all the others are nullable:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cocktail</span><span class="w"> </span><span class="p">(</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">id</span><span class="w">                 </span><span class="n">BIGSERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span><span class="w">               </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span><span class="w">
@@ -861,6 +864,24 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">garnish_id</span><span class="w">         </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">garnish</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">                  </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">created_at</span><span class="w">         </span><span class="k">TIMESTAMP</span><span class="w">    </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">now</span><span class="p">()</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div>
+<p>The rule <em><strong>&ldquo;a cocktail must have at least one ingredient&rdquo;</strong></em> is a <strong>business rule</strong> and is therefore enforced in the service layer, not as a database constraint. This keeps the schema flexible and puts the logic where it can be tested and produce a meaningful error message.</p>
+<p><strong>Non-alcoholic</strong> drinks are modeled as a <code>cocktail_family</code> <strong>(&ldquo;Mocktails&rdquo;)</strong> rather than a separate <code>is_alcoholic</code> flag. This is simpler and fits naturally with the quiz&rsquo;s first question about drink family.</p>
+
+<h3 class="relative group">Foreign key strategy
+    <div id="foreign-key-strategy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#foreign-key-strategy" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>The choice of <code>ON DELETE</code> behavior is deliberate and follows how &ldquo;heavy&rdquo; the relationship is:</p>
+<ul>
+<li><strong><code>RESTRICT</code></strong> on <code>cocktail_family</code>: a family that is used by cocktails cannot be deleted by accident.</li>
+<li><strong><code>SET NULL</code></strong> on ingredients and garnish: if an ingredient is deleted, the cocktail simply loses that ingredient, which is possible because the columns are nullable.</li>
+<li><strong><code>CASCADE</code></strong> on favorites and flavor tags: they are dependent links that make no sense without their parent.</li>
+</ul>
 
 <h3 class="relative group">Data from TheCocktailDB
     <div id="data-from-thecocktaildb" class="anchor"></div>
@@ -873,7 +894,7 @@
 </h3>
 <p><strong>The database is seeded once</strong> from TheCocktailDB, instead of the application making constant live calls to the API.</p>
 <p>The reasoning is that the API does not contain flavor profiles, which, as I mentioned, are the core data of my system. The flavor profiles are necessary for the user to be able to filter the recipes by flavor.</p>
-<p>In addition, the ingredients are just unstructured strings that have to be normalized in my database anyway, and my admin story (9) assumes that my own database is the source of truth. That is the user story that lets an Admin add new recipes to the database.</p>
+<p>In addition, the ingredients are just unstructured strings that would have to be normalized in my database anyway, and my admin user story (9) requires that my own database is the source of truth. That is the user story that lets an Admin add new recipes to the database.</p>
 
           
           
@@ -903,14 +924,14 @@
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/drinksapplication/3-coding-structure-architecture/">
+              href="/posts/drinksapplication/5-entities-jpa-mapping/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Entry 3 - Coding structure
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Entry 5 - Entities and JPA Mapping
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-09-02T00:00:00&#43;00:00">2 September 2026</time>
+                <time datetime="2026-10-04T00:00:00&#43;00:00">4 October 2026</time>
               </span>
             
           

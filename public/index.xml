@@ -22,7 +22,17 @@
     </item>
     
     <item>
-      <title>Entry 3 - Coding structure</title>
+      <title>Entry 5 - Entities and JPA Mapping</title>
+      <link>http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/</link>
+      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 3 - The Project and the Overall Architecture</title>
       <link>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</link>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
