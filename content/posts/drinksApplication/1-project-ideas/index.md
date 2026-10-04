@@ -2,6 +2,8 @@
 title: Entry 1 - 3rd Semester Project Week 1 - What am I making?
 date: 2026-08-30
 showAuthor: true;
+series: ["Drinks Application"]
+series_order: 1
 ---
 
 In week 1 of our third-semester project, I debated what kind of application I wanted to make. I had a few different ideas, but ultimately I settled on a particular idea that I had envisioned for a few months now.

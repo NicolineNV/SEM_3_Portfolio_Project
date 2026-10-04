@@ -24,6 +24,18 @@ html.dark {
   --bamboo-gold: #d9b878;   /* slightly brighter gold for contrast */
 }
 
+/* Serieboks – lys tilstand */
+summary.bg-primary-200 {
+  background-color: #d9dcc8;
+  color: #2a3024;
+}
+
+/* Serieboks – mørk tilstand */
+.dark summary.bg-primary-200 {
+  background-color: #3a4030;
+  color: #e8e0c4;
+}
+
 /* ---- Fix the columns on the sides ----
    html paints the full viewport; body only paints its own box. Without
    this, a viewport wider than the content shows html's default white/

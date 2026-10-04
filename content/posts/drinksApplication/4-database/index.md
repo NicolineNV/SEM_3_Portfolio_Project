@@ -2,6 +2,8 @@
 title: Entry 4 - Database and schema - important decisions
 date: 2026-10-04
 showAuthor: true
+series: ["Drinks Application"]
+series_order: 4
 ---
 
 ## Database

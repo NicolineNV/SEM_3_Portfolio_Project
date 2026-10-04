@@ -2,6 +2,8 @@
 title: Entry 3 - The Project and the Overall Architecture
 date: 2026-09-02
 showAuthor: true
+series: ["Drinks Application"]
+series_order: 3
 ---
 
 So, after a lot of planning and visualizing the final product, it was finally time to start coding - or rather, to set up the structure.

@@ -2,6 +2,8 @@
 title: Entry 2 - Visualize the goal - User stories
 date: 2026-09-01
 showAuthor: true
+series: ["Drinks Application"]
+series_order: 2
 ---
 
 This is my 3rd semester portfolio project, so the goal is very clear:

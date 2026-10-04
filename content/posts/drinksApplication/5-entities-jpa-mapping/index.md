@@ -2,6 +2,8 @@
 title: Entry 5 - Entities and JPA Mapping
 date: 2026-10-04
 showAuthor: true
+series: ["Drinks Application"]
+series_order: 5
 ---
 
 This part covers how the schema became Java classes, and the design choices that need particular understanding.
