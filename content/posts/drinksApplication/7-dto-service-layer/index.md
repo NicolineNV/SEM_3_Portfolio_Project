@@ -146,6 +146,6 @@ public class CocktailService {
 }
 ```
 
-The role check reuses `userService.isAdmin(...)`, so the rule for "what is an admin" exists in one place. The service takes a `UserDTO` and does not look up the user itself. It relies on the caller (the upcoming Javalin layer) having already determined who is logged in.
+The role check reuses `userService.isAdmin(...)`, so the rule for ***"what is an admin"*** exists in one place. The service takes a `UserDTO` and does not look up the user itself. It relies on the caller (the upcoming Javalin layer) having already determined who is logged in.
 
 

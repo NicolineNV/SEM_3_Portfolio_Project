@@ -2,81 +2,91 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drinks Application on Home</title>
-    <link>http://localhost:56036/series/drinks-application/</link>
+    <link>http://localhost:1313/series/drinks-application/</link>
     <description>Recent content in Drinks Application on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
     <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
     <copyright>© 2026 Nicoline Visby</copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:56036/series/drinks-application/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/drinks-application/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Entry 6 - The DAO Layer</title>
-      <link>http://localhost:56036/posts/drinksapplication/6-dao-layer/</link>
+      <link>http://localhost:1313/posts/drinksapplication/6-dao-layer/</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/6-dao-layer/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/6-dao-layer/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 7 - DTOs and the Service Layer</title>
-      <link>http://localhost:56036/posts/drinksapplication/7-dto-service-layer/</link>
+      <link>http://localhost:1313/posts/drinksapplication/7-dto-service-layer/</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/7-dto-service-layer/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/7-dto-service-layer/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 8 - The Quiz Logic and the Strategy Pattern</title>
+      <link>http://localhost:1313/posts/drinksapplication/8-quiz-logic-strategy-pattern/</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/8-quiz-logic-strategy-pattern/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 4 - Database and schema - important decisions</title>
-      <link>http://localhost:56036/posts/drinksapplication/4-database/</link>
+      <link>http://localhost:1313/posts/drinksapplication/4-database/</link>
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/4-database/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/4-database/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 5 - Entities and JPA Mapping</title>
-      <link>http://localhost:56036/posts/drinksapplication/5-entities-jpa-mapping/</link>
+      <link>http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/</link>
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/5-entities-jpa-mapping/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 3 - The Project and the Overall Architecture</title>
-      <link>http://localhost:56036/posts/drinksapplication/3-coding-structure-architecture/</link>
+      <link>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</link>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/3-coding-structure-architecture/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 2 - Visualize the goal - User stories</title>
-      <link>http://localhost:56036/posts/drinksapplication/2-user-stories-goal/</link>
+      <link>http://localhost:1313/posts/drinksapplication/2-user-stories-goal/</link>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/2-user-stories-goal/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/2-user-stories-goal/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 1 - 3rd Semester Project Week 1 - What am I making?</title>
-      <link>http://localhost:56036/posts/drinksapplication/1-project-ideas/</link>
+      <link>http://localhost:1313/posts/drinksapplication/1-project-ideas/</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:56036/posts/drinksapplication/1-project-ideas/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/1-project-ideas/</guid>
       <description></description>
       
     </item>
