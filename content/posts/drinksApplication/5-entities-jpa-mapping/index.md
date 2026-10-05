@@ -6,7 +6,7 @@ series: ["Drinks Application"]
 series_order: 5
 ---
 
-This part covers how the schema became Java classes, and the design choices that need particular understanding.
+This entry covers how the schema became Java classes, and the design choices that deserve a closer explanation.
 
 ## Basic entity and business key
 
