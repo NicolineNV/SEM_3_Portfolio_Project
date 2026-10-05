@@ -15,8 +15,8 @@
 
   
   
-    <title>Entry 4 - Database and schema - important decisions &middot; Home</title>
-    <meta name="title" content="Entry 4 - Database and schema - important decisions &middot; Home">
+    <title>Entry 6 - The DAO Layer &middot; Home</title>
+    <meta name="title" content="Entry 6 - The DAO Layer &middot; Home">
   
 
   
@@ -34,7 +34,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/drinksapplication/4-database/">
+  <link rel="canonical" href="http://localhost:1313/posts/drinksapplication/6-dao-layer/">
   
   
 
@@ -65,15 +65,15 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/drinksapplication/4-database/">
+  <meta property="og:url" content="http://localhost:1313/posts/drinksapplication/6-dao-layer/">
 	<meta property="og:site_name" content="Home">
-	<meta property="og:title" content="Entry 4 - Database and schema - important decisions">
+	<meta property="og:title" content="Entry 6 - The DAO Layer">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-04T00:00:00+00:00">
-		<meta property="article:modified_time" content="2026-10-04T00:00:00+00:00">
-			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/6-dao-layer/">
+		<meta property="article:published_time" content="2026-10-05T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-10-05T00:00:00+00:00">
+			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/4-database/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/2-user-stories-goal/">
@@ -81,7 +81,7 @@
 
   
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Entry 4 - Database and schema - important decisions">
+	<meta name="twitter:title" content="Entry 6 - The DAO Layer">
 
   
   
@@ -245,11 +245,11 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Entry 4 - Database and schema - important decisions",
-    "headline": "Entry 4 - Database and schema - important decisions",
+    "name": "Entry 6 - The DAO Layer",
+    "headline": "Entry 6 - The DAO Layer",
     
     "inLanguage": "en",
-    "url" : "http://localhost:1313/posts/drinksapplication/4-database/",
+    "url" : "http://localhost:1313/posts/drinksapplication/6-dao-layer/",
     "author" : {
       "@type": "Person",
       "name": "Nicoline Visby",
@@ -257,15 +257,15 @@
       "sameAs": ["nnvisby01@gmail.com", "https://github.com/NicolineNV", "https://www.linkedin.com/in/nicoline-visby-8a3757206/"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-04T00:00:00\u002b00:00",
-    "datePublished": "2026-10-04T00:00:00\u002b00:00",
+    "dateCreated": "2026-10-05T00:00:00\u002b00:00",
+    "datePublished": "2026-10-05T00:00:00\u002b00:00",
     
-    "dateModified": "2026-10-04T00:00:00\u002b00:00",
+    "dateModified": "2026-10-05T00:00:00\u002b00:00",
     
     
     
-    "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/4-database/",
-    "wordCount":  1006 
+    "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/6-dao-layer/",
+    "wordCount":  982 
   }]
   </script>
 
@@ -561,7 +561,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Entry 4 - Database and schema - important decisions
+        Entry 6 - The DAO Layer
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -613,7 +613,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-04T00:00:00&#43;00:00">4 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1006 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+      <time datetime="2026-10-05T00:00:00&#43;00:00">5 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>982 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -764,17 +764,10 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents" aria-label="Table of Contents">
   <ul>
-    <li><a href="#database">Database</a></li>
-    <li><a href="#important-decisions-and-reasoning">Important decisions and reasoning</a>
-      <ul>
-        <li><a href="#schema">Schema</a></li>
-        <li><a href="#flavor-profiles-join-tables-with-intensity">Flavor profiles: join tables with intensity</a></li>
-        <li><a href="#cocktailmenu-join-table"><code>CocktailMenu</code> join table</a></li>
-        <li><a href="#the-main-table-cocktail---what-defines-it">The main table <code>cocktail</code> - what defines it?</a></li>
-        <li><a href="#foreign-key-strategy">Foreign key strategy</a></li>
-        <li><a href="#data-from-thecocktaildb">Data from TheCocktailDB</a></li>
-      </ul>
-    </li>
+    <li><a href="#generic-crud-in-one-place">Generic CRUD in one place</a></li>
+    <li><a href="#transactions-and-entitymanager-handling">Transactions and EntityManager handling</a></li>
+    <li><a href="#lazy-loading-and-join-fetch">Lazy loading and <code>JOIN FETCH</code></a></li>
+    <li><a href="#specialized-queries">Specialized queries</a></li>
   </ul>
 </nav>
   </div>
@@ -788,17 +781,10 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContentsMobile" aria-label="Table of Contents">
   <ul>
-    <li><a href="#database">Database</a></li>
-    <li><a href="#important-decisions-and-reasoning">Important decisions and reasoning</a>
-      <ul>
-        <li><a href="#schema">Schema</a></li>
-        <li><a href="#flavor-profiles-join-tables-with-intensity">Flavor profiles: join tables with intensity</a></li>
-        <li><a href="#cocktailmenu-join-table"><code>CocktailMenu</code> join table</a></li>
-        <li><a href="#the-main-table-cocktail---what-defines-it">The main table <code>cocktail</code> - what defines it?</a></li>
-        <li><a href="#foreign-key-strategy">Foreign key strategy</a></li>
-        <li><a href="#data-from-thecocktaildb">Data from TheCocktailDB</a></li>
-      </ul>
-    </li>
+    <li><a href="#generic-crud-in-one-place">Generic CRUD in one place</a></li>
+    <li><a href="#transactions-and-entitymanager-handling">Transactions and EntityManager handling</a></li>
+    <li><a href="#lazy-loading-and-join-fetch">Lazy loading and <code>JOIN FETCH</code></a></li>
+    <li><a href="#specialized-queries">Specialized queries</a></li>
   </ul>
 </nav>
   </div>
@@ -857,8 +843,10 @@
     
       <div
         class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-        Part 4:
-        This Article
+        <a href="/posts/drinksapplication/4-database/">
+          Part 4:
+          Entry 4 - Database and schema - important decisions
+        </a>
       </div>
     
   
@@ -875,10 +863,8 @@
     
       <div
         class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-        <a href="/posts/drinksapplication/6-dao-layer/">
-          Part 6:
-          Entry 6 - The DAO Layer
-        </a>
+        Part 6:
+        This Article
       </div>
     
   
@@ -888,150 +874,132 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          
-<h2 class="relative group">Database
-    <div id="database" class="anchor"></div>
+          <p>The DAO layer is responsible for all communication with the database. I have made some of the project&rsquo;s most important design decisions here.</p>
+
+<h2 class="relative group">Generic CRUD in one place
+    <div id="generic-crud-in-one-place" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#database" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#generic-crud-in-one-place" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>One of the first things I dug into was the relationships between the entities in my domain model, and how they would map to the tables in my database. The database has changed quite a bit from my original thinking when I drew up my first domain model. This is due to a number of challenges I ran into, and an even larger number of important decisions. This took my idea from a simple hand-drawn domain model to a detailed and well-thought-out database structure that satisfies <code>1NF</code>, <code>2NF</code> and <code>3NF</code>.</p>
-<p>At the moment, my ERD diagram looks like this:</p>
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="auto"
-    alt="ERD diagram"
-    width="2000"
-    height="1136"
-    src="/posts/drinksapplication/4-database/erd-diagram_hu_e5df8a846b78a390.png"
-    srcset="/posts/drinksapplication/4-database/erd-diagram_hu_e5df8a846b78a390.png 800w, /posts/drinksapplication/4-database/erd-diagram_hu_5cb79b6471b94b12.png 1280w"
-    sizes="(min-width: 768px) 50vw, 65vw"
-    data-zoom-src="/posts/drinksapplication/4-database/erd-diagram.png"></figure>
+<p>With 14 entities it would be wasteful to write create/read/update/delete 14 times. Instead, <code>IDAO&lt;T, ID&gt;</code> defines the contract and <code>AbstractDAO&lt;T, ID&gt;</code> implements it generically:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IDAO</span><span class="w"> </span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">ID</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">entity</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getById</span><span class="p">(</span><span class="n">ID</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getAll</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">entity</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">ID</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>There are two generic types because not all entities have the same kind of key. Most use <code>Long</code>, but join entities such as <code>SpiritFlavorTag</code> and <code>CocktailMenu</code> use their <code>@EmbeddedId</code> class. A concrete DAO therefore becomes very short:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SpiritDAO</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractDAO</span><span class="o">&lt;</span><span class="n">Spirit</span><span class="p">,</span><span class="w"> </span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">SpiritDAO</span><span class="p">(){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">Spirit</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
 
-<h2 class="relative group">Important decisions and reasoning
-    <div id="important-decisions-and-reasoning" class="anchor"></div>
+<h2 class="relative group">Transactions and EntityManager handling
+    <div id="transactions-and-entitymanager-handling" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#important-decisions-and-reasoning" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#transactions-and-entitymanager-handling" aria-label="Anchor">#</a>
     </span>
     
 </h2>
+<p>Each method opens its own <code>EntityManager</code> through try-with-resources, so it is always closed. All transaction logic is collected in one method, so begin/commit/rollback is not repeated:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">protected</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">executeInTransaction</span><span class="p">(</span><span class="n">Function</span><span class="o">&lt;</span><span class="n">EntityManager</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emf</span><span class="p">.</span><span class="na">createEntityManager</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">EntityTransaction</span><span class="w"> </span><span class="n">emTransaction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">em</span><span class="p">.</span><span class="na">getTransaction</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">emTransaction</span><span class="p">.</span><span class="na">begin</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">T</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">action</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">em</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">emTransaction</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">emTransaction</span><span class="p">.</span><span class="na">isActive</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="n">emTransaction</span><span class="p">.</span><span class="na">rollback</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">logger</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="s">&#34;Transaction failed, rolled back: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">(),</span><span class="w"> </span><span class="n">e</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span></span></span></code></pre></div></div>
+<p>Only write operations (<code>create</code>, <code>update</code>, <code>delete</code>) run in a transaction. Reading needs none. Errors roll back and are logged before being rethrown.</p>
 
-<h3 class="relative group">Schema
-    <div id="schema" class="anchor"></div>
+<h2 class="relative group">Lazy loading and <code>JOIN FETCH</code>
+    <div id="lazy-loading-and-join-fetch" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schema" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lazy-loading-and-join-fetch" aria-label="Anchor">#</a>
     </span>
     
-</h3>
-<p>I decided to build my <code>schema.sql</code> and database first before my Java entities. This means that the entities mirror the tables, and not the other way around. <code>schema.sql</code> is therefore &ldquo;the truth&rdquo;, not Hibernate&rsquo;s auto-generated guesses. All though it can come in handy somethimes that Hibernate can generate tables automatically (<code>hbm2ddl.auto=create</code>) - it can also has its down sides like how its guesses about column types and constraints are imprecise. With a hand-written schema I control data types, <code>CHECK</code> constraints and foreign keys myself, and I can prove that the entities and the schema agree</p>
-<p>The script lives in <code>database/</code> in the project root and not in <code>src/main/resources</code>. It is run manually against PostgreSQL and is not part of the application&rsquo;s runtime, so it should not be packaged into the JAR.</p>
-
-<h3 class="relative group">Flavor profiles: join tables with intensity
-    <div id="flavor-profiles-join-tables-with-intensity" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#flavor-profiles-join-tables-with-intensity" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>As I mentioned in the post about my idea, the user should be able to choose a cocktail based on a flavor preference. This is the most important aspect of my API - you could even go as far as to say it is part of the main purpose.</p>
-<p>Every ingredient (Spirit, Liqueur, Mixer, Syrup) has an intensity from 1 to 5 for each flavor dimension (sweet, sour, bitter, salty, spicy). These flavor profiles are modeled as <code>FlavorTag</code> + <strong>join tables</strong> holding an <code>intensity</code> value for each ingredient type, such as <code>spirit_flavor_tag</code>. Since an ordinary <code>@ManyToMany</code> relationship cannot hold extra columns, the join tables have to be entities of their own with composite keys.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">flavor_tag</span><span class="w"> </span><span class="p">(</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">id</span><span class="w">   </span><span class="n">BIGSERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">spirit_flavor_tag</span><span class="w"> </span><span class="p">(</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">spirit_id</span><span class="w">     </span><span class="nb">BIGINT</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">spirit</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">     </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">flavor_tag_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">flavor_tag</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">intensity</span><span class="w">     </span><span class="nb">SMALLINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">intensity</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">spirit_id</span><span class="p">,</span><span class="w"> </span><span class="n">flavor_tag_id</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div>
-<p>The primary key is composed of the two foreign keys, so an ingredient can only have one intensity per flavor dimension. The <code>CHECK</code> constraint guarantees at the database level that the intensity is between 1 and 5, so invalid data can never get in, regardless of which code writes to the table.</p>
-
-<h3 class="relative group"><code>CocktailMenu</code> join table
-    <div id="cocktailmenu-join-table" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cocktailmenu-join-table" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p><code>CocktailMenu</code> was chosen to be a join table between <code>User</code> and <code>Cocktail</code> called <code>user_favorite_cocktail</code>. Its main purpose is to hold the users&rsquo; saved favorites, and also has an extra column, <code>saved_at</code>. This table covers a big part of user story 2.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">user_favorite_cocktail</span><span class="w"> </span><span class="p">(</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">user_id</span><span class="w">     </span><span class="nb">BIGINT</span><span class="w">    </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">cocktail_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w">    </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cocktail</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">saved_at</span><span class="w">    </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">now</span><span class="p">(),</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span><span class="w"> </span><span class="n">cocktail_id</span><span class="p">)</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div>
-
-<h3 class="relative group">The main table <code>cocktail</code> - what defines it?
-    <div id="the-main-table-cocktail---what-defines-it" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-main-table-cocktail---what-defines-it" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>When I was building the tables and their relationships to each other, I asked myself an important question: <strong>&ldquo;What does a cocktail actually contain in my system?&rdquo;</strong></p>
-<p>My first draft made Spirit, Liqueur, Mixer and Syrup required on a cocktail. That did not hold up in reality: Cocktails such as the <strong>Old Fashioned</strong> only have a base alcohol <strong>(Spirit)</strong> and ice, so all the other category columns would end up being <code>NULL</code>. My thought was then to make <strong>Liqueur</strong>, <strong>Mixer</strong>, <strong>Syrup</strong> and <strong>Garnish</strong> nullable and keep only <strong>Spirit</strong> as <code>NOT NULL</code>, but that was not possible either, since some recipes are non-alcoholic.</p>
-<p>So in the end, only <code>cocktail_family_id</code> is <code>NOT NULL</code> among the relationships, and all the others are nullable:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">cocktail</span><span class="w"> </span><span class="p">(</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">id</span><span class="w">                 </span><span class="n">BIGSERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span><span class="w">               </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">description</span><span class="w">        </span><span class="nb">TEXT</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">instructions</span><span class="w">       </span><span class="nb">TEXT</span><span class="w">         </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">cocktail_family_id</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">cocktail_family</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">RESTRICT</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">spirit_id</span><span class="w">          </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">spirit</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">                   </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">liqueur_id</span><span class="w">         </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">liqueur</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">                  </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">mixer_id</span><span class="w">           </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">mixer</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">                    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">syrup_id</span><span class="w">           </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">syrup</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">                    </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">garnish_id</span><span class="w">         </span><span class="nb">BIGINT</span><span class="w">       </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">garnish</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w">                  </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">created_at</span><span class="w">         </span><span class="k">TIMESTAMP</span><span class="w">    </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">now</span><span class="p">()</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">);</span></span></span></code></pre></div></div>
-<p>The rule <em><strong>&ldquo;a cocktail must have at least one ingredient&rdquo;</strong></em> is a <strong>business rule</strong> and is therefore enforced in the service layer, not as a database constraint. This keeps the schema flexible and puts the logic where it can be tested and produce a meaningful error message.</p>
-<p><strong>Non-alcoholic</strong> drinks are modeled as a <code>cocktail_family</code> <strong>(&ldquo;Mocktails&rdquo;)</strong> rather than a separate <code>is_alcoholic</code> flag. This is simpler and fits naturally with the quiz&rsquo;s first question about drink family.</p>
-
-<h3 class="relative group">Foreign key strategy
-    <div id="foreign-key-strategy" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#foreign-key-strategy" aria-label="Anchor">#</a>
-    </span>
-    
-</h3>
-<p>The choice of <code>ON DELETE</code> behavior is deliberate and follows how &ldquo;heavy&rdquo; the relationship is:</p>
+</h2>
+<p>This is the most central technical problem I encountered in the DAO layer. Because the relations are <code>LAZY</code>, and the <code>EntityManager</code> is closed when the DAO method returns, accessing a lazy relation afterwards throws a <code>LazyInitializationException</code>. I learned that this typically happens when a service maps an entity to a DTO.</p>
+<p>There are a few different ways to fix this problem, and two are very obvious &ldquo;root fixes&rdquo; that I deliberately rejected:</p>
 <ul>
-<li><strong><code>RESTRICT</code></strong> on <code>cocktail_family</code>: a family that is used by cocktails cannot be deleted by accident.</li>
-<li><strong><code>SET NULL</code></strong> on ingredients and garnish: if an ingredient is deleted, the cocktail simply loses that ingredient, which is possible because the columns are nullable.</li>
-<li><strong><code>CASCADE</code></strong> on favorites and flavor tags: they are dependent links that make no sense without their parent.</li>
+<li><strong>Making everything <code>EAGER</code>.</strong> It does not remove the database calls, only their visibility and it applies globally, even where the relations are not used. I learned that this is called the N+1 problem. If my databse were small, maybe this would not be such a grave problem. Tho since I know, that I will seed my databse with over 600 cocktail recipes, and that each cocktail has 6 or more relations, then collecting just a list with all cocktails could be 6 times as many calls or maybe even more. Even though I only need some of the information.</li>
+<li><strong>Open Session in View</strong> (keep the <code>EntityManager</code> open for the whole request). It hides when database calls happen and can hold connections open unnecessarily long. I does not fix the N+1 problem, only hides it. Of course it will not genereate any errors or exceptions, but it will make the site extreamly more slow. Another reason for not using this option, is that it will compromise the layers seperation of responsibilities, that I talked about in entry 3. With a open <code>EntityManager</code> controllers and JSON-mappers could have access to database calls and all the data would no longer be aggregated in the DAO layer.</li>
 </ul>
+<p>Instead I use explicit <code>JOIN FETCH</code> per use case (wich is also the most recommended practice), so each query fetches exactly what it needs and nothing more. This way I can ensure that only the nessecary data will be fetched and I can also avoid any <code>LazyInitializationException</code>. To avoid repetition, the join part is collected in one constant, while the <code>WHERE</code> part is deliberately different for each method:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CocktailDAO</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractDAO</span><span class="o">&lt;</span><span class="n">Cocktail</span><span class="p">,</span><span class="w"> </span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">COCKTAIL_WITH_RELATIONS</span><span class="w"> </span><span class="o">=</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;SELECT c FROM Cocktail c &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;LEFT JOIN FETCH c.cocktailFamily &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1">// LEFT JOIN FETCH because can be null</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;LEFT JOIN FETCH c.spirit &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;LEFT JOIN FETCH c.liqueur &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;LEFT JOIN FETCH c.mixer &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;LEFT JOIN FETCH c.syrup &#34;</span><span class="w"> </span><span class="o">+</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s">&#34;LEFT JOIN FETCH c.garnish &#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">Cocktail</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getByIdWithDetails</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emf</span><span class="p">.</span><span class="na">createEntityManager</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">jpql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">COCKTAIL_WITH_RELATIONS</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;WHERE c.id = :id&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">em</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="n">jpql</span><span class="p">,</span><span class="w"> </span><span class="n">Cocktail</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="p">.</span><span class="na">getResultStream</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                        </span><span class="p">.</span><span class="na">findFirst</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Rest of class logic...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><code>LEFT JOIN FETCH</code> is used because the relations are nullable. A plain <code>JOIN FETCH</code> would exclude cocktails that are missing, for example, a liqueur or a mixer in The Old Fashioned recipe. All six relations are <code>@ManyToOne</code> (single values), so they can be joined at the same time without problems.</p>
+<p>There is one important limitation to notice: you cannot <code>JOIN FETCH</code> several <code>List</code> collections in the same query (it throws a <code>MultipleBagFetchException</code>). Therefore the ingredients&rsquo; <code>flavorTags</code> lists are not fetched in that same query, but are accessed while the <code>EntityManager</code> is still open (I will talk more about that in a later entry).</p>
 
-<h3 class="relative group">Data from TheCocktailDB
-    <div id="data-from-thecocktaildb" class="anchor"></div>
+<h2 class="relative group">Specialized queries
+    <div id="specialized-queries" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#data-from-thecocktaildb" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#specialized-queries" aria-label="Anchor">#</a>
     </span>
     
-</h3>
-<p><strong>The database is seeded once</strong> from TheCocktailDB, instead of the application making constant live calls to the API.</p>
-<p>The reasoning is that the API does not contain flavor profiles, which, as I mentioned, are the core data of my system. The flavor profiles are necessary for the user to be able to filter the recipes by flavor.</p>
-<p>In addition, the ingredients are just unstructured strings that would have to be normalized in my database anyway, and my admin user story (9) requires that my own database is the source of truth. That is the user story that lets an Admin add new recipes to the database.</p>
+</h2>
+<p>Some user stories required more than simple <code>CRUD</code> methods. For example login looks up by username. I chose this because <code>username</code> is the natural key. Before a user logs in, only username and password are entered into the system. The user does not know what their id is, because id is a autogenereted number (<code>BIGSERIAL</code>), they would never see this number and can therefore not inform the system about this. This requires <code>username</code>is <code>UNIQUE</code> so that the post only touches one row. Other than that <em><strong>&ldquo;show my favorites&rdquo;</strong></em> for example also required more than a simple <code>CRUD</code> method. In <code>CocktailMenuDAO</code> the method <code>getFavoritesByUser</code> looks up by user id in a composite-key table and therefore also needs a little more elaborate method:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserDAO</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractDAO</span><span class="o">&lt;</span><span class="n">User</span><span class="p">,</span><span class="w"> </span><span class="n">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">UserDAO</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">User</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">findByUsername</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">EntityManager</span><span class="w"> </span><span class="n">em</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emf</span><span class="p">.</span><span class="na">createEntityManager</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">jpql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;SELECT u FROM User u WHERE u.username = :username&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">List</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">em</span><span class="p">.</span><span class="na">createQuery</span><span class="p">(</span><span class="n">jpql</span><span class="p">,</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="na">class</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&#34;username&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="p">.</span><span class="na">getResultList</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">results</span><span class="p">.</span><span class="na">stream</span><span class="p">().</span><span class="na">findFirst</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>Important to note is that JPQL uses <strong>entity and field names</strong> (<code>User</code>, <code>u.username</code>), not table and column names (<code>users</code>, the <code>username</code> column). Hibernate translates to SQL through <code>@Table</code>/<code>@Column</code>, so a table can be renamed without touching queries.</p>
 
           
           
@@ -1081,8 +1049,10 @@
     
       <div
         class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-        Part 4:
-        This Article
+        <a href="/posts/drinksapplication/4-database/">
+          Part 4:
+          Entry 4 - Database and schema - important decisions
+        </a>
       </div>
     
   
@@ -1099,10 +1069,8 @@
     
       <div
         class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-        <a href="/posts/drinksapplication/6-dao-layer/">
-          Part 6:
-          Entry 6 - The DAO Layer
-        </a>
+        Part 6:
+        This Article
       </div>
     
   
@@ -1132,9 +1100,9 @@
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/drinksapplication/5-entities-jpa-mapping/">
+              href="/posts/drinksapplication/4-database/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Entry 5 - Entities and JPA Mapping
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Entry 4 - Database and schema - important decisions
               </span>
             </a>
             
@@ -1145,19 +1113,6 @@
           
         </span>
         <span class="flex flex-col items-end">
-          
-            <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/drinksapplication/6-dao-layer/">
-              <span class="leading-6">
-                Entry 6 - The DAO Layer&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
-              </span>
-            </a>
-            
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-05T00:00:00&#43;00:00">5 October 2026</time>
-              </span>
-            
           
         </span>
       </div>
