@@ -62,7 +62,7 @@ protected void onCreate() {
 }
 ```
 
-I have chosen to use `EnumType.STRING`, and not `ORDINAL`. `ORDINAL` stores the enum as a number (0, 1, ...), and if values are later reordered or inserted, the meaning of every existing row silently changes. `@PrePersist` sets the timestamp automatically on first save, so it can never be forgotten.
+I chose `EnumType.STRING` rather than `ORDINAL`. `ORDINAL` stores the enum as a number (0, 1, ...), and if values are later reordered or inserted, the meaning of every existing row silently changes. `@PrePersist` sets the timestamp automatically on first save, so it can never be forgotten.
 
 ## Composite keys and join entities with extra data
 
@@ -124,7 +124,7 @@ public class Spirit {
 
 ## Cocktail: the optional relations and lazy loading
 
-`Cocktail` ties everything together. Its the biggest class and represents the complete cocktail recipe. Five of the relations are optional, and all are `LAZY`:
+`Cocktail` ties everything together. It is the biggest class and represents the complete cocktail recipe. Five of the relations are optional, and all six are `LAZY`:
 
 ```java
 @Entity
@@ -146,16 +146,17 @@ public class Cocktail {
     // Constructors, getters, setters, equals and hashCode
 }
 ```
-The default for `@ManyToOne` is `EAGER`, which would load every relation each time a cocktail is read, even where they are not used at all. With `LAZY` I only load what I ask for. The price is that lazy loading has to be handled deliberately, which is something I will cover in the next entry.
+
+The default for `@ManyToOne` is `EAGER`, which would load all relations each time a cocktail is read, even when they are not used at all. With `LAZY`, I only load what I ask for. The price is that lazy loading has to be handled deliberately, which is something I will cover in the next entry.
 
 ## Registration and validation of the schema
 
 Entities are registered explicitly in `EntityRegistry` with `addAnnotatedClass(...)`. The `Role` enum and the `@Embeddable` id classes do not need to be registered, since they are discovered through the entities that use them.
 
-`hbm2ddl.auto` is used differently throughout the project. While developing the entities I used `create` to quickly see whether the mappings were valid. Afterwards I ran `schema.sql` manually and switched to `validate`:
+`hbm2ddl.auto` is set differently at different stages of the project. While developing the entities, I used `create` to quickly see whether the mappings were valid. Afterwards, I ran `schema.sql` manually and switched to `validate`:
 
 ```java
-// HibernateConfig: locally the mode is controlled via config.properties, deployed is always validate
+// HibernateConfig: locally the mode is controlled via config.properties, when deployed, it is always validate
 if (System.getenv("DEPLOYED") != null) {
             props.put("hibernate.hbm2ddl.auto", "validate");
             setDeployedProperties(props);
@@ -167,4 +168,4 @@ if (System.getenv("DEPLOYED") != null) {
     return props;
 ```
 
-`validate` is the only mode that proves my entities match my hand-written schema (column names, nullability and types). Hibernate changes nothing, but fails at startup if something does not line up. I ruled out `update` because Hibernate's schema guesses are imprecise, and it never removes obsolete columns.
+`validate` is the only mode that proves my entities match my hand-written schema (tables, column names and types). Hibernate changes nothing, but fails at startup if something does not line up. I ruled out `update` because Hibernate's schema guesses are imprecise, and it never removes obsolete columns.

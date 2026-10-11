@@ -73,12 +73,12 @@
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-10-04T00:00:00+00:00">
 		<meta property="article:modified_time" content="2026-10-04T00:00:00+00:00">
+			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/9-error-handling-logging/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/6-dao-layer/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/7-dto-service-layer/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/8-quiz-logic-strategy-pattern/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/4-database/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/">
-			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/2-user-stories-goal/">
 
   
 	<meta name="twitter:card" content="summary">
@@ -266,7 +266,7 @@
     
     
     "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/",
-    "wordCount":  806 
+    "wordCount":  810 
   }]
   </script>
 
@@ -614,7 +614,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-04T00:00:00&#43;00:00">4 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>806 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2026-10-04T00:00:00&#43;00:00">4 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>810 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -891,6 +891,16 @@
       </div>
     
   
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/9-error-handling-logging/">
+          Part 9:
+          Entry 9 - Error Handling and Logging
+        </a>
+      </div>
+    
+  
 
 
   </details>
@@ -959,7 +969,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">createdAt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
-<p>I have chosen to use <code>EnumType.STRING</code>, and not <code>ORDINAL</code>. <code>ORDINAL</code> stores the enum as a number (0, 1, &hellip;), and if values are later reordered or inserted, the meaning of every existing row silently changes. <code>@PrePersist</code> sets the timestamp automatically on first save, so it can never be forgotten.</p>
+<p>I chose <code>EnumType.STRING</code> rather than <code>ORDINAL</code>. <code>ORDINAL</code> stores the enum as a number (0, 1, &hellip;), and if values are later reordered or inserted, the meaning of every existing row silently changes. <code>@PrePersist</code> sets the timestamp automatically on first save, so it can never be forgotten.</p>
 
 <h2 class="relative group">Composite keys and join entities with extra data
     <div id="composite-keys-and-join-entities-with-extra-data" class="anchor"></div>
@@ -1027,7 +1037,7 @@
     </span>
     
 </h2>
-<p><code>Cocktail</code> ties everything together. Its the biggest class and represents the complete cocktail recipe. Five of the relations are optional, and all are <code>LAZY</code>:</p>
+<p><code>Cocktail</code> ties everything together. It is the biggest class and represents the complete cocktail recipe. Five of the relations are optional, and all six are <code>LAZY</code>:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Entity</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="nd">@Table</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;cocktail&#34;</span><span class="p">)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cocktail</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1046,7 +1056,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Constructors, getters, setters, equals and hashCode</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
-<p>The default for <code>@ManyToOne</code> is <code>EAGER</code>, which would load every relation each time a cocktail is read, even where they are not used at all. With <code>LAZY</code> I only load what I ask for. The price is that lazy loading has to be handled deliberately, which is something I will cover in the next entry.</p>
+<p>The default for <code>@ManyToOne</code> is <code>EAGER</code>, which would load all relations each time a cocktail is read, even when they are not used at all. With <code>LAZY</code>, I only load what I ask for. The price is that lazy loading has to be handled deliberately, which is something I will cover in the next entry.</p>
 
 <h2 class="relative group">Registration and validation of the schema
     <div id="registration-and-validation-of-the-schema" class="anchor"></div>
@@ -1058,8 +1068,8 @@
     
 </h2>
 <p>Entities are registered explicitly in <code>EntityRegistry</code> with <code>addAnnotatedClass(...)</code>. The <code>Role</code> enum and the <code>@Embeddable</code> id classes do not need to be registered, since they are discovered through the entities that use them.</p>
-<p><code>hbm2ddl.auto</code> is used differently throughout the project. While developing the entities I used <code>create</code> to quickly see whether the mappings were valid. Afterwards I ran <code>schema.sql</code> manually and switched to <code>validate</code>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// HibernateConfig: locally the mode is controlled via config.properties, deployed is always validate</span><span class="w">
+<p><code>hbm2ddl.auto</code> is set differently at different stages of the project. While developing the entities, I used <code>create</code> to quickly see whether the mappings were valid. Afterwards, I ran <code>schema.sql</code> manually and switched to <code>validate</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// HibernateConfig: locally the mode is controlled via config.properties, when deployed, it is always validate</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">getenv</span><span class="p">(</span><span class="s">&#34;DEPLOYED&#34;</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">props</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&#34;hibernate.hbm2ddl.auto&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;validate&#34;</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">setDeployedProperties</span><span class="p">(</span><span class="n">props</span><span class="p">);</span><span class="w">
@@ -1069,7 +1079,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">setDevProperties</span><span class="p">(</span><span class="n">props</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">props</span><span class="p">;</span></span></span></code></pre></div></div>
-<p><code>validate</code> is the only mode that proves my entities match my hand-written schema (column names, nullability and types). Hibernate changes nothing, but fails at startup if something does not line up. I ruled out <code>update</code> because Hibernate&rsquo;s schema guesses are imprecise, and it never removes obsolete columns.</p>
+<p><code>validate</code> is the only mode that proves my entities match my hand-written schema (tables, column names and types). Hibernate changes nothing, but fails at startup if something does not line up. I ruled out <code>update</code> because Hibernate&rsquo;s schema guesses are imprecise, and it never removes obsolete columns.</p>
 
           
           
@@ -1160,6 +1170,16 @@
         <a href="/posts/drinksapplication/8-quiz-logic-strategy-pattern/">
           Part 8:
           Entry 8 - The Quiz Logic and the Strategy Pattern
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/9-error-handling-logging/">
+          Part 9:
+          Entry 9 - Error Handling and Logging
         </a>
       </div>
     
