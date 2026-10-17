@@ -73,12 +73,12 @@
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-10-06T00:00:00+00:00">
 		<meta property="article:modified_time" content="2026-10-06T00:00:00+00:00">
+			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/12-seeding-database-part-2/">
+			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/11-seeding-database-part-1/">
+			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/10-testing/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/6-dao-layer/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/7-dto-service-layer/">
 			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/8-quiz-logic-strategy-pattern/">
-			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/4-database/">
-			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/">
-			<meta property="og:see_also" content="http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/">
 
   
 	<meta name="twitter:card" content="summary">
@@ -266,7 +266,7 @@
     
     
     "mainEntityOfPage": "http://localhost:1313/posts/drinksapplication/9-error-handling-logging/",
-    "wordCount":  431 
+    "wordCount":  706 
   }]
   </script>
 
@@ -614,7 +614,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-06T00:00:00&#43;00:00">6 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>431 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2026-10-06T00:00:00&#43;00:00">6 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span>706 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -769,6 +769,7 @@
     <li><a href="#named-status-codes-instead-of-magic-numbers">Named status codes instead of magic numbers</a></li>
     <li><a href="#what-should-be-logged">What should be logged?</a></li>
     <li><a href="#where-to-go-from-here">Where to go from here</a></li>
+    <li><a href="#updated-16th-october-error-handling-in-the-seed-seedexception"><strong>UPDATED 16th October</strong>: Error handling in the seed: <code>SeedException</code></a></li>
   </ul>
 </nav>
   </div>
@@ -786,6 +787,7 @@
     <li><a href="#named-status-codes-instead-of-magic-numbers">Named status codes instead of magic numbers</a></li>
     <li><a href="#what-should-be-logged">What should be logged?</a></li>
     <li><a href="#where-to-go-from-here">Where to go from here</a></li>
+    <li><a href="#updated-16th-october-error-handling-in-the-seed-seedexception"><strong>UPDATED 16th October</strong>: Error handling in the seed: <code>SeedException</code></a></li>
   </ul>
 </nav>
   </div>
@@ -899,6 +901,36 @@
       </div>
     
   
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/10-testing/">
+          Part 10:
+          Entry 10 - Testing - Unit and Integration
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/11-seeding-database-part-1/">
+          Part 11:
+          Entry 11 - Seeding the Database from TheCocktailDB API - Part 1
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/12-seeding-database-part-2/">
+          Part 12:
+          Entry 12 - Seeding the Database from TheCocktailDB API - Part 2
+        </a>
+      </div>
+    
+  
 
 
   </details>
@@ -977,6 +1009,23 @@
 </h2>
 <p>Error and exception handling is a topic that will be in constant development throughout the API&rsquo;s entire build process. Exceptions can happen in multiple places throughout the backend layers, and as the project grows, so does the risk of encountering one. Most of the Javalin and routing layer has not been built yet, and that is probably where most of the exception handling and logging will be.</p>
 <p>I therefore expect this entry to grow considerably, with a lot more information and examples of correct exception handling.</p>
+
+<h2 class="relative group"><strong>UPDATED 16th October</strong>: Error handling in the seed: <code>SeedException</code>
+    <div id="updated-16th-october-error-handling-in-the-seed-seedexception" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#updated-16th-october-error-handling-in-the-seed-seedexception" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In entries 11 and 12, I documented the whole seeding process of my database, with data fetched from TheCocktailDB API. That part of the process was complicated and demanding (which I also cover in detail there), and because the code can encounter exceptions in multiple places, I chose to capture these in their own <code>SeedException</code> class.</p>
+<p>The importer could fail in a lot of different ways: it cannot read a CSV file, it cannot list <code>raw/</code>, the JSON cannot be parsed, or a drink cannot be saved. All of these throw a custom <strong>unchecked</strong> <code>SeedException</code>, which carries the original exception as its <em>cause</em> whenever it wraps another exception. At the moment, these exceptions are only logged manually in the classes that throw them. To optimize <code>SeedException</code>, the logging could be moved into the exception’s constructor, as I do in <code>ApiException</code>, so that every <code>SeedException</code> is logged in the same way.</p>
+<ul>
+<li><strong>Unchecked</strong>, because the caller cannot do anything sensible about a failed seed. If the file is missing, the right reaction is to stop and show the message, not to force every method up the call chain to declare <code>throws</code>.</li>
+<li><strong>With a cause</strong>, so the original stack trace is not lost. The message says <em>what I was doing</em> (example: &ldquo;Could not read classification files in database/seed&rdquo;) and the cause says <em>what actually went wrong</em>.</li>
+</ul>
+<p>I made a seed-specific exception instead of reusing <code>ApiException</code>, because <code>ApiException</code> carries an HTTP status code and belongs to the REST layer. A failed import has nothing to do with HTTP, and therefore should not use an exception class dedicated to that.</p>
 
           
           
@@ -1081,6 +1130,36 @@
       </div>
     
   
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/10-testing/">
+          Part 10:
+          Entry 10 - Testing - Unit and Integration
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/11-seeding-database-part-1/">
+          Part 11:
+          Entry 11 - Seeding the Database from TheCocktailDB API - Part 1
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+        <a href="/posts/drinksapplication/12-seeding-database-part-2/">
+          Part 12:
+          Entry 12 - Seeding the Database from TheCocktailDB API - Part 2
+        </a>
+      </div>
+    
+  
 
 
   </details>
@@ -1120,6 +1199,19 @@
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/drinksapplication/10-testing/">
+              <span class="leading-6">
+                Entry 10 - Testing - Unit and Integration&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-10-11T00:00:00&#43;00:00">11 October 2026</time>
+              </span>
+            
           
         </span>
       </div>

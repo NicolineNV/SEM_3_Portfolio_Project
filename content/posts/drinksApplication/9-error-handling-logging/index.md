@@ -55,3 +55,14 @@ I never log `rawPassword` or `passwordHash`, not even on errors. Passwords are s
 Error and exception handling is a topic that will be in constant development throughout the API's entire build process. Exceptions can happen in multiple places throughout the backend layers, and as the project grows, so does the risk of encountering one. Most of the Javalin and routing layer has not been built yet, and that is probably where most of the exception handling and logging will be.
 
 I therefore expect this entry to grow considerably, with a lot more information and examples of correct exception handling.
+
+## **UPDATED 16th October**: Error handling in the seed: `SeedException`
+
+In entries 11 and 12, I documented the whole seeding process of my database, with data fetched from TheCocktailDB API. That part of the process was complicated and demanding (which I also cover in detail there), and because the code can encounter exceptions in multiple places, I chose to capture these in their own `SeedException` class.
+
+The importer could fail in a lot of different ways: it cannot read a CSV file, it cannot list `raw/`, the JSON cannot be parsed, or a drink cannot be saved. All of these throw a custom **unchecked** `SeedException`, which carries the original exception as its *cause* whenever it wraps another exception. At the moment, these exceptions are only logged manually in the classes that throw them. To optimize `SeedException`, the logging could be moved into the exception’s constructor, as I do in `ApiException`, so that every `SeedException` is logged in the same way.
+
+- **Unchecked**, because the caller cannot do anything sensible about a failed seed. If the file is missing, the right reaction is to stop and show the message, not to force every method up the call chain to declare `throws`.
+- **With a cause**, so the original stack trace is not lost. The message says *what I was doing* (example: "Could not read classification files in database/seed") and the cause says *what actually went wrong*.
+
+I made a seed-specific exception instead of reusing `ApiException`, because `ApiException` carries an HTTP status code and belongs to the REST layer. A failed import has nothing to do with HTTP, and therefore should not use an exception class dedicated to that.

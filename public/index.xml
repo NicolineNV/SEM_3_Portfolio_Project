@@ -9,7 +9,27 @@
     <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
     <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
     <copyright>© 2026 Nicoline Visby</copyright>
-    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Entry 12 - Seeding the Database from TheCocktailDB API - Part 2</title>
+      <link>http://localhost:1313/posts/drinksapplication/12-seeding-database-part-2/</link>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/12-seeding-database-part-2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 11 - Seeding the Database from TheCocktailDB API - Part 1</title>
+      <link>http://localhost:1313/posts/drinksapplication/11-seeding-database-part-1/</link>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/11-seeding-database-part-1/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Entry 10 - Testing - Unit and Integration</title>
