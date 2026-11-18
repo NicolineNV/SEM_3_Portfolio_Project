@@ -3,12 +3,15 @@
 none = "none"
 
 [[main]]
-name = "Posts"
+name = "All Posts"
 pageRef = "posts"
 identifier = "Hy3ubsyJ2"
-weight = 9_990
+weight = 10
 
-
+[[main]]
+  name = "Post by Series"
+  url = "/series/"
+  weight = 20
 
 [[footer]]
 none = "none"

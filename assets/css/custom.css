@@ -156,6 +156,21 @@ blockquote::before {
   );
 }
 
+/* ---- Series Cards ---- */
+.series-card {
+  border-color: #4f7a5e !important;
+  transition: border-color 0.2s;
+}
+
+.series-card:hover {
+  border-color: #7fae8c !important;
+}
+
+.series-count {
+  border-color: #4f7a5e;
+  color: #7fae8c;
+}
+
 /* ---- Code ---- */
 code, pre {
   background-color: var(--matcha-line) !important;

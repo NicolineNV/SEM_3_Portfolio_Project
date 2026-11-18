@@ -9,124 +9,174 @@
     <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
     <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
     <copyright>© 2026 Nicoline Visby</copyright>
-    <lastBuildDate>Fri, 16 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Entry 1 - Time for the Frontend - Setting up new repo</title>
+      <link>http://localhost:1313/posts/drinksapplication/frontend-react-javascript/1-react-repo-setup/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/frontend-react-javascript/1-react-repo-setup/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 16 - From personal machine to the Droplet - Getteing the API deployed</title>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/16-deployment-api-to-droplet/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/16-deployment-api-to-droplet/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 15 - Preparing for production and the CI/CD Pipeline</title>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/15-ci-cd-github-actions-docker-hub/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/15-ci-cd-github-actions-docker-hub/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 14 - REST tests with REST-assured and Testcontainers</title>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/14-rest-assured-test/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/14-rest-assured-test/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Entry 13 - Building the Javalin layer</title>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/13-javalin-controller-layer/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/13-javalin-controller-layer/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Entry 12 - Seeding the Database from TheCocktailDB API - Part 2</title>
-      <link>http://localhost:1313/posts/drinksapplication/12-seeding-database-part-2/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/12-seeding-database-part-2/</link>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/12-seeding-database-part-2/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/12-seeding-database-part-2/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 11 - Seeding the Database from TheCocktailDB API - Part 1</title>
-      <link>http://localhost:1313/posts/drinksapplication/11-seeding-database-part-1/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/11-seeding-database-part-1/</link>
       <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/11-seeding-database-part-1/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/11-seeding-database-part-1/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 10 - Testing - Unit and Integration</title>
-      <link>http://localhost:1313/posts/drinksapplication/10-testing/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/10-testing/</link>
       <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/10-testing/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/10-testing/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 9 - Error Handling and Logging</title>
-      <link>http://localhost:1313/posts/drinksapplication/9-error-handling-logging/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/9-error-handling-logging/</link>
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/9-error-handling-logging/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/9-error-handling-logging/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 6 - The DAO Layer</title>
-      <link>http://localhost:1313/posts/drinksapplication/6-dao-layer/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/6-dao-layer/</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/6-dao-layer/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/6-dao-layer/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 7 - DTOs and the Service Layer</title>
-      <link>http://localhost:1313/posts/drinksapplication/7-dto-service-layer/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/7-dto-service-layer/</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/7-dto-service-layer/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/7-dto-service-layer/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 8 - The Quiz Logic and the Strategy Pattern</title>
-      <link>http://localhost:1313/posts/drinksapplication/8-quiz-logic-strategy-pattern/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/8-quiz-logic-strategy-pattern/</link>
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/8-quiz-logic-strategy-pattern/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/8-quiz-logic-strategy-pattern/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 4 - Database and schema - important decisions</title>
-      <link>http://localhost:1313/posts/drinksapplication/4-database/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/4-database/</link>
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/4-database/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/4-database/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 5 - Entities and JPA Mapping</title>
-      <link>http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/5-entities-jpa-mapping/</link>
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/5-entities-jpa-mapping/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/5-entities-jpa-mapping/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 3 - The Project and the Overall Architecture</title>
-      <link>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/3-coding-structure-architecture/</link>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/3-coding-structure-architecture/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/3-coding-structure-architecture/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 2 - Visualize the goal - User stories</title>
-      <link>http://localhost:1313/posts/drinksapplication/2-user-stories-goal/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/2-user-stories-goal/</link>
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/2-user-stories-goal/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/2-user-stories-goal/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Entry 1 - 3rd Semester Project Week 1 - What am I making?</title>
-      <link>http://localhost:1313/posts/drinksapplication/1-project-ideas/</link>
+      <link>http://localhost:1313/posts/drinksapplication/backend-rest-api/1-project-ideas/</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       <author>nnvisby01@gmail.com (Nicoline Visby)</author>
-      <guid>http://localhost:1313/posts/drinksapplication/1-project-ideas/</guid>
+      <guid>http://localhost:1313/posts/drinksapplication/backend-rest-api/1-project-ideas/</guid>
       <description></description>
       
     </item>

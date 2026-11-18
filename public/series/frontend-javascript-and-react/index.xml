@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frontend JavaScript and REACT on Home</title>
+    <link>http://localhost:1313/series/frontend-javascript-and-react/</link>
+    <description>Recent content in Frontend JavaScript and REACT on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nnvisby01@gmail.com (Nicoline Visby)</managingEditor>
+    <webMaster>nnvisby01@gmail.com (Nicoline Visby)</webMaster>
+    <copyright>© 2026 Nicoline Visby</copyright>
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/frontend-javascript-and-react/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Entry 1 - Time for the Frontend - Setting up new repo</title>
+      <link>http://localhost:1313/posts/drinksapplication/frontend-react-javascript/1-react-repo-setup/</link>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      <author>nnvisby01@gmail.com (Nicoline Visby)</author>
+      <guid>http://localhost:1313/posts/drinksapplication/frontend-react-javascript/1-react-repo-setup/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
